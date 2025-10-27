@@ -1,0 +1,55 @@
+/* style.css */
+
+/* Custom tweaks */
+.hero-bg {
+  background-image: linear-gradient(110deg, rgba(99, 102, 241, 0.12), rgba(236, 72, 153, 0.06));
+}
+
+/* style.css */
+
+/* Small custom tweaks */
+.hero-bg {
+  background-image: linear-gradient(110deg, rgba(99, 102, 241, 0.12), rgba(236, 72, 153, 0.06));
+}
+
+/* style.css */
+
+/* Hapus kode .logo-rgb dan @keyframes yang lama */
+
+/* EFEK RGB CHROMA WAVE (Gaya ROG dari Video) */
+.logo-rgb {
+  position: relative; /* Diperlukan untuk pseudo-element */
+  overflow: hidden;   /* Menyembunyikan gradien yang keluar dari area logo */
+  background-color: #1a1a1a; /* Warna dasar logo jika animasi tidak didukung */
+}
+
+.logo-rgb::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;  /* Gradien 3x lebih lebar dari logo */
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    #ff0000, /* Merah */
+    #ff7f00, /* Oranye */
+    #ffff00, /* Kuning */
+    #00ff00, /* Hijau */
+    #00ffff, /* Cyan */
+    #0000ff, /* Biru */
+    #8b00ff, /* Ungu */
+    #ff00ff, /* Pink */
+    #ff0000  /* Kembali ke Merah untuk loop mulus */
+  );
+  animation: chroma-wave 5s linear infinite;
+}
+
+@keyframes chroma-wave {
+  0% {
+    transform: translateX(-66.66%); /* Mulai dari posisi 2/3 di luar layar kiri */
+  }
+  100% {
+    transform: translateX(0%); /* Bergerak hingga gradien awal sampai ke tepi kiri */
+  }
+}
