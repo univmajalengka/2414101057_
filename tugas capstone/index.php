@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puncak Petualangan Anda Dimulai Di Sini | BENTALA</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">BENTALA</div>
+        <nav>
+            <ul>
+                <li><a href="index.php">Beranda</a></li> 
+                <li><a href="destinasi.php">Destinasi</a></li>
+                <li><a href="riwayat.php">Riwayat Pesanan</a></li>
+                <li><a href="pesan.php" class="cta-button">Pesan Pendakian</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>TAKHLUKKAN KETINGGIAN. CIPTAKAN CERITA.</h1>
+            <p>Jelajahi jalur pendakian terbaik di Indonesia bersama pemandu bersertifikasi dan perlengkapan premium.</p>
+            <a href="destinasi.php" class="main-cta-button">LIHAT SEMUA JALUR ⛰️</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 BENTALA. Semua Hak Dilindungi. | Etika Pendakian: *Leave No Trace*.</p>
+    </footer>
+
+</body>
+</html>

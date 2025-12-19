@@ -1,0 +1,301 @@
+/* ==================================== */
+/* 🌳 Skema Warna Tema Alam */
+/* ==================================== */
+:root {
+    --color-primary: #6B8E23;   /* Hijau Lumut (Dominan) */
+    --color-secondary: #8B4513; /* Cokelat Tanah (Aksen/Tombol) */
+    --color-accent: #388E3C;    /* Hijau Hutan (CTA) */
+    --color-text-dark: #333333; /* Hitam Batu */
+    --color-background-light: #F5F5DC; /* Krem / Beige */
+    --color-stone: #D3D3D3;     /* Abu-abu Batu */
+}
+
+/* ==================================== */
+/* 🌎 Global & Body Styling */
+/* ==================================== */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-light); /* Latar belakang Krem */
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--color-primary); /* Judul berwarna Hijau Lumut */
+}
+
+/* ==================================== */
+/* 🌲 Navigasi (Header) */
+/* ==================================== */
+.navbar {
+    background-color: rgba(107, 142, 35, 0.9); /* Hijau Lumut semi-transparan */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan alam */
+}
+
+.logo {
+    color: white;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--color-stone); /* Efek hover abu-abu batu */
+}
+
+/* Tombol CTA di Navigasi */
+.cta-button {
+    background-color: var(--color-secondary) !important; /* Cokelat Tanah */
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #A0522D !important; /* Cokelat lebih gelap */
+    transform: translateY(-2px);
+}
+
+/* ==================================== */
+/* ⛰️ Hero Section (Tampilan Depan) - SUDAH DIBENARKAN */
+/* ==================================== */
+.hero {
+    /* PATH DIBENARKAN: Silakan cek dan ganti ke 'foto/uing.png' jika style.css sejajar dengan folder foto. */
+    /* Saya menggunakan path relatif umum: */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('foto/uing.png');
+    
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.1); 
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.main-cta-button {
+    display: inline-block;
+    background-color: var(--color-accent); /* Hijau Hutan */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px; /* Bentuk membulat */
+    font-weight: 700;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.main-cta-button:hover {
+    background-color: #556B2F; /* Hijau lebih gelap */
+    box-shadow: 0 0 15px var(--color-accent);
+}
+
+/* ==================================== */
+/* 🏞️ Destinasi Section (Horizontal Scroll) */
+/* ==================================== */
+.destinasi-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--color-background-light);
+}
+
+.destinasi-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 3px solid var(--color-secondary); /* Garis bawah cokelat */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Memungkinkan scroll horizontal */
+    padding: 20px 50px; /* Padding samping untuk scroll */
+    -webkit-overflow-scrolling: touch; 
+}
+
+/* Styling Scrollbar bertema alam (Webkit) */
+.card-container::-webkit-scrollbar {
+    height: 8px;
+}
+.card-container::-webkit-scrollbar-track {
+    background: var(--color-background-light);
+}
+.card-container::-webkit-scrollbar-thumb {
+    background: var(--color-secondary); /* Cokelat Tanah */
+    border-radius: 10px;
+}
+.card-container::-webkit-scrollbar-thumb:hover {
+    background: #A0522D; 
+}
+
+
+/* --- Kartu Destinasi --- */
+.destinasi-card {
+    flex: 0 0 auto;
+    width: 300px;
+    min-width: 280px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Bayangan lebih halus */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Agar ada ruang setelah kartu */
+}
+
+.destinasi-card:hover {
+    transform: translateY(-8px) scale(1.02); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Efek melayang dramatis */
+}
+
+.destinasi-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.destinasi-card h3 {
+    padding: 15px 15px 0 15px;
+    margin-top: 0;
+    color: var(--color-secondary); /* Nama gunung warna Cokelat Tanah */
+}
+
+.destinasi-card p {
+    padding: 0 15px;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.detail-link {
+    display: block;
+    text-align: center;
+    background-color: var(--color-primary); /* Hijau Lumut sebagai latar belakang link */
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.detail-link:hover {
+    background-color: var(--color-secondary); /* Berubah menjadi Cokelat Tanah saat hover */
+}
+
+/* --- Tag Kesulitan --- */
+.difficulty {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 15px 15px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+}
+
+/* TINGKAT PEMULA: Hijau (Mudah/Hutan) */
+.beginner {
+    background-color: var(--color-accent); /* Hijau Hutan */
+}
+
+/* TINGKAT MENENGAH: Kuning/Oranye (Bumi) */
+.intermediate {
+    background-color: #FFA000; /* Amber/Oranye */
+}
+
+/* TINGKAT AHLI: Merah (Tantangan) */
+.expert {
+    background-color: #D32F2F; /* Merah Marun */
+}
+
+
+/* ==================================== */
+/* 🍂 Footer */
+/* ==================================== */
+.footer {
+    background-color: var(--color-secondary); /* Cokelat Tanah */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer a {
+    color: #F5F5DC;
+    text-decoration: none;
+}
+
+/* ==================================== */
+/* 📱 Media Queries (Responsif) */
+/* ==================================== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+    .navbar nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .card-container {
+        padding: 10px;
+    }
+}
